@@ -1597,7 +1597,6 @@ class CodeFormatter(object):
 CLANG_FORMAT_EVOLUTION = """\
 # Clang 3.5
 + BasedOnStyle string
-        LLVM
         Google
         Chromium
         Mozilla
@@ -1672,7 +1671,6 @@ CLANG_FORMAT_EVOLUTION = """\
         Always
 # Clang 3.5
 + BasedOnStyle string
-        LLVM
         Google
         Chromium
         Mozilla
@@ -1998,6 +1996,73 @@ CLANG_FORMAT_EVOLUTION = """\
         AfterColon
 # Clang 7
 + SpaceBeforeCpp11BracedList bool
+# Clang 8
++ StatementMacros std::vector<std::string>
+# Clang 8
++ JavaImportGroups std::vector<std::string>
+# Clang 9
++ AllowShortIfStatementsOnASingleLine ShortIfStyle
+        Never
+        WithoutElse
+        Always
+# Clang 9
++ AllowShortIfStatementsOnASingleLine bool
+# Clang 9
++ AllowShortIfStatementsOnASingleLine ShortIfStyle
+        Never
+        WithoutElse
+        Always
+# Clang 9
++ IndentPPDirectives PPDirectiveIndentStyle
+        None
+        AfterHash
+        BeforeHash
+# Clang 9
++ Language LanguageKind
+        None
+        Cpp
+        CSharp
+        Java
+        JavaScript
+        ObjC
+        Proto
+        TableGen
+        TextProto
+# Clang 9
++ AllowAllArgumentsOnNextLine bool
++ AllowAllConstructorInitializersOnNextLine bool
+# Clang 9
++ AllowShortLambdasOnASingleLine ShortLambdaStyle
+        None
+        Empty
+        Inline
+        All
+# Clang 9
++ SpaceBeforeParens SpaceBeforeParensOptions
+        Never
+        ControlStatements
+        NonEmptyParentheses
+        Always
+# Clang 9
++ SpaceAfterLogicalNot bool
+# Clang 9
++ BraceWrapping BraceWrappingFlags
+        bool AfterCaseLabel
+        bool AfterClass
+        bool AfterControlStatement
+        bool AfterEnum
+        bool AfterFunction
+        bool AfterNamespace
+        bool AfterObjCDeclaration
+        bool AfterStruct
+        bool AfterUnion
+        bool AfterExternBlock
+        bool BeforeCatch
+        bool BeforeElse
+        bool IndentBraces
+        bool SplitEmptyFunction
+        bool SplitEmptyRecord
+        bool SplitEmptyNamespace
 """
 
 
